@@ -1,0 +1,137 @@
+/*
+** Links
+*/
+
+a {
+    text-decoration: none;
+}
+
+/* 
+** Header
+*/
+#header-hero {
+    position: relative;
+    min-height: 1px;
+    background-size: cover;
+    background-position: 50% 0%;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    padding: 3em 0;
+}
+
+#header-hero::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0; 
+}
+
+#header-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/*
+** Buttons & badges & bubbles
+*/
+
+.btn,
+.btn-outline {
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+.btn,
+.btn-outline:hover {
+    background-color: #001f4c;
+    border-color: #001f4c;
+    color: white;
+    transition: all .5s;
+}
+
+.btn:hover,
+.btn-outline,
+.btn-nolink {
+    background-color: rgba(211, 211, 211, .3);
+    border: 1px solid #001f4c;
+    color: #001f4c;
+    transition: all .5s;
+}
+
+.rounded-pill {
+    border-radius: 20px;
+    padding: 5px 15px 8px 15px;
+}
+
+.btn-noborder,
+.btn-noborder:hover {
+    border: 0;
+}
+
+.btn-nolink:hover {
+    cursor: text;
+}
+
+#header-hero .btn-hero {
+    background: radial-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.3));
+    border-radius: 20px;
+    border-width: 0;
+    padding: 10px 20px;
+}
+
+#header-hero .btn-hero:hover {
+    background: radial-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.4));    
+    color: white;
+    transition: all .5s;
+}
+
+.badge {
+    background: lightgray;
+    margin: .3em;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.badge:hover {
+    background: gray;
+    transition: all .5s;
+}
+
+.badge a {
+    color: black;
+    text-decoration: none;
+}
+
+.bubble {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 32px;
+}
+
+/*
+** Pexeso
+*/
+
+.pexeso-card {
+    width: calc(100% / 7.35);
+    background: linear-gradient(rgb(0, 31, 76),#0047b3);
+}
+
+@media (max-width: 992px) {
+    .pexeso-card {
+        width: calc(100% / 4.15)
+    }
+}
+
+@media (max-width: 380px) {
+    .pexeso-card {
+        width: calc(100% / 4.25)
+    }
+}
+
+.hidden-card > img {
+    opacity: 0;
+}
